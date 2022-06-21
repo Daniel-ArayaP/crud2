@@ -8,9 +8,7 @@
 </mat-toolbar>
 
 <div class="container">
-
   <div style="margin-top:10px">
-
   <mat-form-field appearance="standard">
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
@@ -19,29 +17,41 @@
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
   
-      <!-- ID Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-      </ng-container>
-  
-      <!-- Progress Column -->
-      <ng-container matColumnDef="progress">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-        <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
-      </ng-container>
-  
       <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+      <ng-container matColumnDef="productName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre del Producto: </th>
+        <td mat-cell *matCellDef="let row"> {{row.productName}} </td>
       </ng-container>
   
-      <!-- Fruit Column -->
-      <ng-container matColumnDef="fruit">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
-        <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
+      <!-- Category Column -->
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Categoria </th>
+        <td mat-cell *matCellDef="let row"> {{row.category}}% </td>
       </ng-container>
+  
+      <!-- date Column -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date</th>
+        <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+      </ng-container>
+  
+      <!-- Fresness Column -->
+      <ng-container matColumnDef="freshness">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Fresness </th>
+        <td mat-cell *matCellDef="let row"> {{row.freshness}} </td>
+      </ng-container>
+       <!-- price Column -->
+       <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Precio </th>
+        <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+      </ng-container>
+       <!-- comments Column -->
+       <ng-container matColumnDef="comment">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Comments </th>
+        <td mat-cell *matCellDef="let row"> {{row.comment}} </td>
+      </ng-container>
+
+
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
