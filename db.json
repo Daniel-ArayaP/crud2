@@ -1,0 +1,32 @@
+{
+  "productList": [
+    {
+      "productName": "Sandia",
+      "category": "fruits",
+      "freshness": "Nuevo",
+      "price": 100,
+      "comment": "mmmmmmmmmm",
+      "date": "2022-06-15T06:00:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Mango",
+      "category": "fruits",
+      "freshness": "Usado",
+      "price": 100,
+      "comment": "miiiiiiiiiiiiiiiiiiiiiiiiiisterio",
+      "date": "2022-06-15T06:00:00.000Z",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
