@@ -56,15 +56,11 @@
          <button mat-icon-button (click)="editProduct(row)" color="primary">
           <mat-icon>Edit </mat-icon>
           </button>
-          <button mat-icon-button color="warn">
+          <button (click)="deleteProduct(row.id)" color="warn">
             <mat-icon>Delete </mat-icon>
             </button>
-
            </td>
       </ng-container>
-
-
-  
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   

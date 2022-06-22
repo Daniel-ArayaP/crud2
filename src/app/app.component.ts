@@ -30,16 +30,24 @@ export class AppComponent implements OnInit{
   openDialog() {
     this.dialog.open(DialogComponent, {
       width: '30%'
-      
-    });
+    }).afterClosed().subscribe(val=>{
+      if(val ==='save'){
+        this.getAllProducts();
+      }
+
+
+    })
   }
    editProduct(row : any){
       this.dialog.open(DialogComponent,{ 
         width: '30%',
         data:row
+ }).afterClosed().subscribe(val=>{
+  if(val ==='update'){
+    this.getAllProducts();
+  }
  })
-   }
-
+ }
   getAllProducts(): void{
 
     this.api.getProduct()
@@ -50,7 +58,7 @@ export class AppComponent implements OnInit{
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        console.log(res)
+       // console.log(res)
 
       },error:()=>{
 
@@ -58,6 +66,24 @@ export class AppComponent implements OnInit{
       }
     })
   }
+
+deleteProduct(id:number){
+
+this.api.deleteProduct(id)
+.subscribe({
+
+  next:(res)=>{
+    alert('Increible se borro exitosamente')
+    this.getAllProducts();
+
+  },
+  error:()=>{
+    alert("Error mientras se borraba el record")
+  }
+})
+
+}
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

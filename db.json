@@ -1,31 +1,67 @@
 {
   "productList": [
     {
-      "productName": "Sandia",
-      "category": "fruits",
+      "productName": "Tomate",
+      "category": "vegetables",
       "freshness": "Nuevo",
-      "price": 100,
-      "comment": "mmmmmmmmmm",
-      "date": "2022-06-15T06:00:00.000Z",
-      "id": 1
-    },
-    {
-      "productName": "Mango",
-      "category": "fruits",
-      "freshness": "Usado",
-      "price": 100,
-      "comment": "miiiiiiiiiiiiiiiiiiiiiiiiiisterio",
+      "price": 1000,
+      "comment": "Esta verdura es una de mis preferidas",
       "date": "2022-06-15T06:00:00.000Z",
       "id": 2
     },
     {
-      "productName": "Sandia Deliciosa",
+      "productName": "Hongos",
+      "category": "vegetables",
+      "freshness": "Nuevo",
+      "price": 1000,
+      "comment": "hongos frescos",
+      "date": "2022-06-15T06:00:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "Chile",
+      "category": "vegetables",
+      "freshness": "Nuevo",
+      "price": 500,
+      "comment": "chiles verdes y dulces",
+      "date": "2022-06-21T06:00:00.000Z",
+      "id": 5
+    },
+    {
+      "productName": "Joyas de oro",
+      "category": "jewerly",
+      "freshness": "Nuevo",
+      "price": 2000,
+      "comment": "joyas y anillos",
+      "date": "2022-06-07T06:00:00.000Z",
+      "id": 6
+    },
+    {
+      "productName": "Laptop",
+      "category": "electronic",
+      "freshness": "Nuevo",
+      "price": 2000,
+      "comment": "Esta es una laptop lenovo de 8gb de ram",
+      "date": "2022-06-22T06:00:00.000Z",
+      "id": 7
+    },
+    {
+      "productName": "Laptop HP",
+      "category": "electronic",
+      "freshness": "Nuevo",
+      "price": 2000,
+      "comment": "Esta es una laptop hp de 8 gb de ram",
+      "date": "2022-06-14T06:00:00.000Z",
+      "id": 8
+    },
+    {
+      "productName": "Cebolla",
       "category": "fruits",
       "freshness": "Nuevo",
-      "price": 100,
-      "comment": "mmmmmmmmmm",
-      "date": "2022-06-15T06:00:00.000Z",
-      "id": 3
+      "price": 450,
+      "comment": "cebolla morada",
+      "date": "2022-06-14T06:00:00.000Z",
+      "id": 9
     }
   ],
   "comments": [
