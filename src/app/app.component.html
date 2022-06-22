@@ -50,6 +50,18 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Comments </th>
         <td mat-cell *matCellDef="let row"> {{row.comment}} </td>
       </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Action </th>
+        <td mat-cell *matCellDef="let row"> 
+         <button mat-icon-button color="primary">
+          <mat-icon>Edit </mat-icon>
+          </button>
+          <button mat-icon-button color="warn">
+            <mat-icon>Delete </mat-icon>
+            </button>
+
+           </td>
+      </ng-container>
 
 
   
