@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
 
   constructor(private dialog : MatDialog, private api : ApiService) { }
   ngOnInit(): void {
-this.getAllProducts();
+     this.getAllProducts();
   }
 
   openDialog() {
@@ -33,7 +33,14 @@ this.getAllProducts();
       
     });
   }
-  getAllProducts(){
+   editProduct(row : any){
+      this.dialog.open(DialogComponent,{ 
+        width: '30%',
+        data:row
+ })
+   }
+
+  getAllProducts(): void{
 
     this.api.getProduct()
     .subscribe({
